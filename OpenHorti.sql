@@ -1,7 +1,13 @@
-CREATE TABLE usuarios (
-    id SERIAL PRIMARY KEY, 
-    nome_usuario VARCHAR (50) UNIQUE NOT NULL,
-    email VARCHAR (100) UNIQUE NOT NULL,
-    senha VARCHAR (100) NOT NULL,
-    criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE produtos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(50),
+    codigo VARCHAR(50),
+    preco VARCHAR(50),
+    imagem VARCHAR(50)
 );
+
+INSERT INTO produtos (nome, codigo, preco, imagem)
+VALUES ('Abacate', '1632935', 'R$ 7,00/kg', 'abacate.jpg');
+
+INSERT INTO produtos (nome, codigo, preco, imagem)
+VALUES ('Avocado', '00000004814974', 'R$ 10,00/kg', 'avocado.jpg');
